@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<div>
+{% set var = 0 %}
+{% for product in products %}
+    {{ product }}
+    {% set var = var + 1 %}
+    {% if var == 3 %}
+        </div><div>
+        {% set var = 0 %}
+    {% endif %}
+{% endfor %}
+</div>
+</body>
+</html>
